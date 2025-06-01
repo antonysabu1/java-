@@ -11,10 +11,3 @@ A set of useful Java programs for practice and learning, especially tailored for
 
 ---
 
-## 🚀 Getting Started
-
-To compile and run any program:
-
-```bash'''
-javac ProgramName.java
-java ProgramName
