@@ -8,7 +8,7 @@ class Thread01 extends Thread {
         try {
             for (int i = 1; i <= 5; i++) {
                 Random r = new Random();
-                int n = r.nextInt(25);  // generates random number between 0–24
+                int n = r.nextInt(25);
 
                 System.out.println("Generated number: " + n);
 
@@ -22,7 +22,7 @@ class Thread01 extends Thread {
                     th03.start();
                 }
 
-                Thread.sleep(1000);  // Pause for 1 second
+                Thread.sleep(1000);  
             }
         } catch (Exception e) {
             System.out.println("Exception: " + e);
@@ -44,4 +44,22 @@ class EvenThread extends Thread {
 }
 
 class OddThread extends Thread {
-    int nu
+    int number;
+
+    OddThread(int n) {
+        this.number = n;
+    }
+
+    public void run() {
+        int cube = number * number * number;
+        System.out.println("Cube of " + number + " is: " + cube + "\n");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Thread01 th = new Thread01();
+        th.start();
+    }
+}
+
